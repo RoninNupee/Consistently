@@ -1,0 +1,87 @@
+obj is {
+  id: '1861850433691779366',
+  name: 'Davnci AI ⚛️',
+  username: 'Davinci',
+  text: '⚛️ Let me say something about #Davinci\n' +
+    '\n' +
+    'Today, the second season of Interchain Jam on @Davinci has wrapped up!\n' +
+    '\n' +
+    'Over 17 episodes, where we gave voice to 40 Davinci teams.\n' +
+    '\n' +
+    'Having these conversations gave me a deeper understanding of Davinci and its contributors. What stands out most… ',
+  inReplyToStatusId: undefined,
+  createdAt: 'Wed Nov 27 19:11:49 +0000 2024',
+  userId: '1325476994562334720',
+  conversationId: '1861850433691779366',
+  hashtags: [ { indices: [Array], text: 'Davinci' } ],
+  mentions: [
+    {
+      id_str: '15223775',
+      name: 'Davinci - The Interchain ⚛️',
+      screen_name: 'Davinci',
+      indices: [Array]
+    }
+  ],
+  photos: [
+    {
+      display_url: 'pic.x.com/k97v6qQdVU',
+      expanded_url: '',
+      id_str: '1861848231195426816',
+      indices: [Array],
+      media_key: '3_1861848231195426816',
+      media_url_https: ',
+      type: 'photo',
+      url: '',
+      ext_media_availability: [Object],
+      features: [Object],
+      sizes: [Object],
+      original_info: [Object],
+      media_results: [Object]
+    }
+  ],
+  thread: [],
+  urls: [],
+  videos: []
+}return new AgentRuntime({
+        databaseAdapter: db,
+        token,
+        modelProvider: character.modelProvider,
+        evaluators: [],
+        character,
+        plugins: [
+            bootstrapPlugin,
+            nodePlugin,
+            character.settings.secrets?.WALLET_PUBLIC_KEY ? solanaPlugin : null,
+        ].filter(Boolean),
+        providers: [],
+        actions: [],
+        services: [],
+        managers: [],
+    });
+}Error: Unknown subtask ArkoseLogin
+    at TwitterUserAuth.login (file:///Users/konstantine25b/Desktop/eliza/node_modules/agent-twitter-client/dist/node/esm/index.mjs:366:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Scraper.login (file:///Users/konstantine25b/Desktop/eliza/node_modules/agent-twitter-client/dist/node/esm/index.mjs:2647:5)
+    at async _ClientBase.init (file:///Users/konstantine25b/Desktop/eliza/packages/client-twitter/dist/index.js:921:13)
+    at async Object.start (file:///Users/konstantine25b/Desktop/eliza/packages/client-twitter/dist/index.js:1171:9)
+    at async initializeClients (file:///Users/konstantine25b/Desktop/eliza/agent/src/index.ts:157:32)
+    at async startAgent (file:///Users/konstantine25b/Desktop/eliza/agent/src/index.ts:231:25)
+    at async startAgents (file:///Users/konstantine25b/Desktop/eliza/agent/src/index.ts:252:13)
+ ⛔ ERRORS
+   Error starting agents: 
+   {}async function loadLangInfoEntriesIfNeeded() {
+    if (langInfoEntries.length > 0) {
+        return;
+    }
+
+    const entries = (await readAndParseJsonFile(
+        resolveToModuleRootDir("data/tables/lcid-table.json")
+    )) as LangInfoEntry[];
+
+    for (const entry of entries) {
+        entry.NameLowerCase = entry.Name.toLowerCase();
+        entry.EnglishNameLowerCase = entry.EnglishName.toLowerCase();
+
+        langInfoEntries.push(entry);
+    }
+}
