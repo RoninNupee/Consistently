@@ -30,7 +30,7 @@ for package in "${PACKAGES[@]}"; do
         continue
     fi
 
-    echo -e "\033[1mLinting package: $package\033[0m"
+    echo -e "\033[1mLinting package: $package\033[0m"f
     cd "$package_path" || continue
 
     if [ -f "package.json" ]; then
