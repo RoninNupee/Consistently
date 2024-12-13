@@ -11,4 +11,4 @@ npx concurrently --raw \
   "pnpm --dir packages/adapter-sqlite dev -- $*" \
   "pnpm --dir packages/adapter-postgres dev -- $*" \
   "pnpm --dir packages/plugin-buttplug dev -- $*" \
-  "node -e \"setTimeout(() => process.exit(0), 5000)\" && pnpm --dir agent dev -- $*"
+  "node -e \"setTimeout(() => process.exit(0), 5000)\" && pnpm --dir agent dev -- $*"f
