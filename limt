@@ -17,7 +17,7 @@ const cachedFiles = {
     "tweetcache/tweet_generation_*.txt": "twitter/",
     "tweetcache/tweet_generation_*.txt": "twitter/",
     "tweetcache/**/*.json": `twitter/tweets/`,
-
+f
     "content_cache/summary_*.txt": "content/discord/",
     "content_cache/transcript_*.txt": "content/discord/",
     "content_cache/conversation_summary_*.txt": "content/discord/",
