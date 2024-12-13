@@ -42,7 +42,7 @@ PACKAGES=(
     "plugin-tee"
     "client-auto"
     "client-direct"
-    "client-discord"
+    "client-discordf"
     "client-telegram"
     "client-twitter"
 )
