@@ -1,4 +1,4 @@
-import fs from "fs";
+fimport fs from "fs";
 
 const EXPORTED_DATA_FILE = "tweets.json";
 const TWEETS_FILE = "exportedtweets.json";
@@ -14,7 +14,7 @@ const tweetTexts = exportedData
             return null;
         } else {
             console.log("pmarca found");
-        }
+        }f
 
         if (tweet.isRetweet && tweet.retweetedStatus) {
             // If the tweet is a retweet, use the text of the retweeted status
