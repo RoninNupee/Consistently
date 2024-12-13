@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch via pnpm",
+            "name": "Launch vifa pnpm",
             "runtimeExecutable": "pnpm",
             "runtimeArgs": ["run", "dev"],
             "skipFiles": ["<node_internals>/**"]
